@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shubham Srivastav | SAP Integration Developer & Lead</title>
+<meta name="description" content="Shubham Srivastav, SAP Certified Associate Integration Developer (C_CPI_2506). 7 years building and owning SAP CPI and BTP Integration Suite landscapes, with 200+ integration flows delivered." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0b0f17;
+    --bg-soft: #111726;
+    --card: #131a2a;
+    --card-hover: #18213450;
+    --border: #1f2a40;
+    --text: #e7ecf5;
+    --text-dim: #9aa7bd;
+    --text-faint: #6b7896;
+    --accent: #5b9dff;
+    --accent-2: #7c5cff;
+    --accent-soft: #5b9dff1a;
+    --ring: #5b9dff44;
+    --shadow: 0 20px 50px -20px rgba(0,0,0,0.6);
+    --radius: 16px;
+    --maxw: 1080px;
+  }
+  [data-theme="light"] {
+    --bg: #f6f8fc;
+    --bg-soft: #eef2f9;
+    --card: #ffffff;
+    --card-hover: #f3f6fc;
+    --border: #e2e8f4;
+    --text: #131a2a;
+    --text-dim: #4a5878;
+    --text-faint: #8090ac;
+    --accent: #2f6bff;
+    --accent-2: #7c5cff;
+    --accent-soft: #2f6bff14;
+    --ring: #2f6bff33;
+    --shadow: 0 20px 50px -24px rgba(40,60,120,0.25);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background .4s ease, color .4s ease;
+  }
+  h1, h2, h3, .display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.02em; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- background glow ---------- */
+  .bg-fx {
+    position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+  }
+  .glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .35; }
+  .glow.a { width: 480px; height: 480px; background: var(--accent); top: -160px; left: -120px; }
+  .glow.b { width: 420px; height: 420px; background: var(--accent-2); top: 220px; right: -140px; opacity:.28; }
+  .grid-lines {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px; opacity: .12;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+  .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 12px var(--accent); }
+  .nav-links { display: flex; align-items: center; gap: 6px; }
+  .nav-links a { font-size: .9rem; color: var(--text-dim); padding: 8px 12px; border-radius: 10px; transition: .2s; font-weight: 500; }
+  .nav-links a:hover { color: var(--text); background: var(--card-hover); }
+  .theme-btn {
+    margin-left: 8px; width: 38px; height: 38px; border-radius: 11px; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; font-size: 1rem; display: grid; place-items: center; transition: .2s;
+  }
+  .theme-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  @media (max-width: 760px) { .nav-links a:not(.cta) { display: none; } }
+
+  .cta {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff !important; font-weight: 600; box-shadow: 0 8px 20px -8px var(--accent);
+  }
+  .cta:hover { background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important; filter: brightness(1.08); transform: translateY(-1px); }
+
+  /* ---------- hero ---------- */
+  header.hero { padding: 84px 0 56px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 500;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid var(--ring);
+    padding: 7px 14px; border-radius: 999px; margin-bottom: 24px;
+  }
+  .pill .live { width: 7px; height: 7px; border-radius: 50%; background: #25d366; box-shadow: 0 0 8px #25d366; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; font-weight: 700; }
+  .hero h1 .grad { background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .role { font-size: clamp(1.05rem, 2.4vw, 1.4rem); color: var(--text-dim); margin-top: 16px; font-weight: 500; font-family: 'Space Grotesk'; }
+  .hero p.lede { max-width: 680px; margin-top: 22px; color: var(--text-dim); font-size: 1.05rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; padding: 12px 20px; border-radius: 12px;
+    font-weight: 600; font-size: .95rem; cursor: pointer; transition: .2s; border: 1px solid var(--border);
+  }
+  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border: none; box-shadow: 0 12px 28px -12px var(--accent); }
+  .btn.primary:hover { transform: translateY(-2px); filter: brightness(1.07); }
+  .btn.ghost { background: var(--card); color: var(--text); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+  /* ---------- stats ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
+  @media (max-width: 720px){ .stats { grid-template-columns: repeat(2,1fr); } }
+  .stat {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 22px 20px; transition: .25s; position: relative; overflow: hidden;
+  }
+  .stat:hover { transform: translateY(-4px); border-color: var(--ring); box-shadow: var(--shadow); }
+  .stat .num { font-family: 'Space Grotesk'; font-size: 2.1rem; font-weight: 700; background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat .lbl { color: var(--text-faint); font-size: .85rem; margin-top: 4px; }
+
+  /* ---------- sections ---------- */
+  section { padding: 64px 0; }
+  .sec-head { margin-bottom: 40px; }
+  .sec-tag { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  .sec-head h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-top: 10px; font-weight: 700; }
+  .sec-head p { color: var(--text-dim); margin-top: 10px; max-width: 640px; }
+
+  /* ---------- timeline ---------- */
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent); }
+  .job { position: relative; margin-bottom: 34px; }
+  .job::before {
+    content: ""; position: absolute; left: -30px; top: 6px; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--bg); border: 3px solid var(--accent); box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  .job-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: .25s; }
+  .job-card:hover { border-color: var(--ring); transform: translateX(4px); box-shadow: var(--shadow); }
+  .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .job-top h3 { font-size: 1.2rem; }
+  .job-top h3 .co { color: var(--accent); }
+  .job-when { font-size: .85rem; color: var(--text-faint); background: var(--bg-soft); padding: 4px 12px; border-radius: 999px; border: 1px solid var(--border); white-space: nowrap; }
+  .job-loc { font-size: .85rem; color: var(--text-faint); margin-top: 2px; }
+  .job ul { list-style: none; margin-top: 16px; display: grid; gap: 9px; }
+  .job ul li { position: relative; padding-left: 22px; color: var(--text-dim); font-size: .95rem; }
+  .job ul li::before { content: "▸"; position: absolute; left: 0; top: 0; color: var(--accent); }
+  .job ul li strong { color: var(--text); font-weight: 600; }
+
+  /* ---------- skills ---------- */
+  .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; }
+  .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; transition: .25s; }
+  .skill-card:hover { transform: translateY(-4px); border-color: var(--ring); box-shadow: var(--shadow); }
+  .skill-card h3 { font-size: 1.05rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .skill-card h3 .ic { width: 34px; height: 34px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; font-size: 1.05rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: .82rem; padding: 6px 12px; border-radius: 9px; background: var(--bg-soft); border: 1px solid var(--border); color: var(--text-dim); transition: .2s; }
+  .tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+  /* ---------- two-col (edu + certs) ---------- */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media (max-width: 800px){ .two-col { grid-template-columns: 1fr; } }
+  .panel { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+  .panel > h3 { font-size: 1.15rem; margin-bottom: 20px; display:flex; align-items:center; gap:10px; }
+  .edu-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .edu-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .edu-item .deg { font-weight: 600; }
+  .edu-item .sch { color: var(--accent); font-size: .95rem; margin-top: 2px; }
+  .edu-item .meta { color: var(--text-faint); font-size: .85rem; margin-top: 4px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .cert-list { display: grid; gap: 12px; }
+  .cert { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px; transition:.2s; }
+  .cert:hover { border-color: var(--ring); transform: translateX(3px); }
+  .cert .badge { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; flex: none; color:#fff; font-weight:700; font-size:.8rem; }
+  .cert .ct { font-size: .92rem; }
+  .cert .ct small { display:block; color: var(--text-faint); font-size:.78rem; }
+
+  /* ---------- achievements ---------- */
+  .ach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 16px; }
+  .ach { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; transition:.25s; }
+  .ach:hover { transform: translateY(-4px); border-color: var(--ring); box-shadow: var(--shadow); }
+  .ach .em { font-size: 1.6rem; }
+  .ach h4 { margin: 10px 0 6px; font-size: 1rem; font-family:'Space Grotesk'; }
+  .ach p { color: var(--text-dim); font-size: .9rem; }
+
+  /* ---------- contact ---------- */
+  .contact-card { background: linear-gradient(135deg, var(--card), var(--bg-soft)); border: 1px solid var(--border); border-radius: 24px; padding: 48px; text-align: center; position: relative; overflow: hidden; }
+  .contact-card::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 50% 0%, var(--accent-soft), transparent 60%); }
+  .contact-card > * { position: relative; }
+  .contact-card h2 { font-size: clamp(1.6rem,4vw,2.3rem); }
+  .contact-card p { color: var(--text-dim); margin: 12px auto 28px; max-width: 460px; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+  footer { text-align: center; color: var(--text-faint); font-size: .85rem; padding: 40px 0 60px; border-top: 1px solid var(--border); }
+
+  #toast {
+    position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 24px);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff;
+    padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: .92rem;
+    box-shadow: 0 16px 36px -12px var(--accent); opacity: 0; pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease; z-index: 100;
+  }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* reveal animation */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media print {
+    nav, .bg-fx, .theme-btn, .hero-actions, .contact-links { display: none !important; }
+    body { background:#fff; color:#000; }
+  }
+</style>
+</head>
+<body data-theme="dark">
+  <div class="bg-fx">
+    <div class="grid-lines"></div>
+    <div class="glow a"></div>
+    <div class="glow b"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="wrap nav-inner">
+      <div class="brand"><span class="dot"></span> Shubham Srivastav</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="cta">Get in touch</a>
+        <button class="theme-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="reveal">Hi, I'm Shubham,<br><span class="grad">SAP Integration Developer & Lead</span></h1>
+      <div class="role reveal">SAP Certified Associate Integration Developer (C_CPI_2506)</div>
+      <p class="lede reveal">I have 7 years building and owning SAP CPI and BTP Integration Suite landscapes, with <strong>200+ integration flows</strong> delivered across build, enhancement, and production support. I take integrations end to end, lead delivery teams, run PI/PO to CPI migrations, and keep high priority production interfaces stable across global enterprise systems.</p>
+      <div class="hero-actions reveal">
+        <a class="btn primary" href="#contact">📬 Let's connect</a>
+        <a class="btn ghost" href="#experience">View experience</a>
+        <a class="btn ghost email-link" href="mailto:shubhamsrivastav.904@gmail.com" data-email="shubhamsrivastav.904@gmail.com">✉️ Email me</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><div class="num">7+</div><div class="lbl">Years in SAP integration</div></div>
+        <div class="stat reveal"><div class="num">200+</div><div class="lbl">Integration flows delivered</div></div>
+        <div class="stat reveal"><div class="num">15+</div><div class="lbl">Consultants led</div></div>
+        <div class="stat reveal"><div class="num">12+</div><div class="lbl">International clients</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">About</div>
+        <h2>Owning integrations, end to end</h2>
+        <p>Give me an integration landscape and I can own it or improve it. I handle the full lifecycle, from design and build to migration and 24/7 production support, while leading the people who deliver it. My focus is reliable data flow between global enterprise systems, and permanent fixes over firefighting.</p>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card reveal">
+          <h3><span class="ic">🛠️</span> Build & Design</h3>
+          <p style="color:var(--text-dim);font-size:.95rem;">200+ flows across SAP CPI and BTP Integration Suite, both standard and custom, built on Clean Core principles with rigorous testing.</p>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">🔄</span> Migration</h3>
+          <p style="color:var(--text-dim);font-size:.95rem;">Hands-on PI/PO to CPI migrations and legacy to S/4HANA moves, rebuilding complex interfaces from scratch.</p>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">👥</span> Delivery Leadership</h3>
+          <p style="color:var(--text-dim);font-size:.95rem;">Led teams of up to 15 consultants covering daily monitoring, AMS support, mentoring, and faster issue resolution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">Experience</div>
+        <h2>Where I've delivered</h2>
+        <p>Seven years across leading consultancies, owning integration delivery for global enterprises in oil & gas, manufacturing, fashion retail, and robotics.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="job reveal">
+          <div class="job-card">
+            <div class="job-top">
+              <div>
+                <h3>Consultant · <span class="co">Capgemini</span></h3>
+                <div class="job-loc">Gandhinagar, India</div>
+              </div>
+              <span class="job-when">Dec 2024 to Present</span>
+            </div>
+            <ul>
+              <li>Own build and error resolution for <strong>100+ live integration interfaces</strong> across two enterprise programs, keeping data flowing reliably between business systems.</li>
+              <li>Led the go-live of a <strong>12-interface program for National Gas with zero major post-deployment issues</strong>, directing a team of 7 across technical and functional roles.</li>
+              <li>Reworked National Gas integrations to cut message volume and improve flow efficiency, with a solution I designed and got approved by business stakeholders.</li>
+              <li>Built automation for certificate-expiry alerts and stakeholder monitoring reports, cutting manual effort and improving operational reliability.</li>
+              <li>Spearheaded the redesign of <strong>38 integration flows on the Burberry program</strong>, delivered through phased production releases.</li>
+              <li>Led 8 engineers on Burberry covering daily monitoring and AMS support, including HR integrations across <strong>20+ countries</strong> on SAP SuccessFactors.</li>
+              <li>Ran integration delivery for a parallel program, managing <strong>15 consultants</strong> and speeding up resolution of delivery issues.</li>
+              <li>Created runbooks and interface documentation for clean handover between build and support teams; worked hands-on with SAP API Management.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job reveal">
+          <div class="job-card">
+            <div class="job-top">
+              <div>
+                <h3>Senior Associate · <span class="co">PwC</span></h3>
+                <div class="job-loc">Bangalore, India</div>
+              </div>
+              <span class="job-when">Nov 2021 to Dec 2024</span>
+            </div>
+            <ul>
+              <li>Built <strong>70+ interfaces over 2.5 years</strong> for a global oil & gas company, a robotics company, and a paint manufacturer, covering customer data, orders, delivery, and invoicing.</li>
+              <li>Delivered integrations for the <strong>greenfield IT setup at Birla Opus</strong>, enabling clean data flow across new business systems.</li>
+              <li>Drove FANUC's move from legacy systems to <strong>SAP S/4HANA</strong> and migrated integrations from SAP PO to SAP CPI on the Clean Core approach.</li>
+              <li>Worked across SAP C4C, SMC, SAP CPQ, SAP S/4, and SAP Commerce using standard and custom flows.</li>
+              <li>Built an interface to auto-update expiring Keystore certificates and alert the business by email, <strong>a first of its kind at PwC</strong>.</li>
+              <li>Promoted to <strong>Integration Lead within 5 months</strong> for delivering quality solutions under tight deadlines; delivered in 2 to 4 week Agile sprints.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job reveal">
+          <div class="job-card">
+            <div class="job-top">
+              <div>
+                <h3>Consultant · <span class="co">Tata Consultancy Services</span></h3>
+                <div class="job-loc">Gandhinagar, India</div>
+              </div>
+              <span class="job-when">Jul 2019 to Nov 2021</span>
+            </div>
+            <ul>
+              <li>Built <strong>80+ interfaces for 12 international clients</strong> and improved data security by 30%.</li>
+              <li>Integrated SAP with external systems across B2B scenarios while <strong>leading a team of 5 engineers</strong>.</li>
+              <li>Used Java and Groovy to work around SAP CPI limitations; worked on graphical mapping and SAP Cloud Connector configuration.</li>
+              <li>Built automated interface monitoring that <strong>saved 2 hours of manual work per client</strong>.</li>
+              <li>Completed openSAP training on Application Integration with SAP HANA Cloud Integration; cleared internal SAP PI Advanced & Process Orchestration exams in 2020.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">Skills</div>
+        <h2>Tools & technologies</h2>
+        <p>The stack I build, migrate, and support integrations with day to day.</p>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card reveal">
+          <h3><span class="ic">☁️</span> SAP Integration</h3>
+          <div class="tags">
+            <span class="tag">SAP CPI</span><span class="tag">BTP Integration Suite</span><span class="tag">SAP PI/PO</span>
+            <span class="tag">SAP BTP</span><span class="tag">SAP Cloud Connector</span><span class="tag">API Management</span>
+            <span class="tag">Event Mesh</span><span class="tag">SAP C4C</span><span class="tag">SAP ERP</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">💻</span> Languages</h3>
+          <div class="tags">
+            <span class="tag">Java</span><span class="tag">Groovy Script</span><span class="tag">Python</span>
+            <span class="tag">C</span><span class="tag">C++</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">🧪</span> Tools</h3>
+          <div class="tags">
+            <span class="tag">Postman</span><span class="tag">SOAP UI</span><span class="tag">Mendelson Tool</span>
+            <span class="tag">Graphical Mapping</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3><span class="ic">🌐</span> Spoken Languages</h3>
+          <div class="tags">
+            <span class="tag">English (Fluent)</span><span class="tag">Hindi (Fluent)</span><span class="tag">Gujarati (Intermediate)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTS -->
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">Credentials</div>
+        <h2>Education & certifications</h2>
+      </div>
+      <div class="two-col">
+        <div class="panel reveal">
+          <h3>🎓 Education</h3>
+          <div class="edu-item">
+            <div class="deg">Executive MBA</div>
+            <div class="sch">IIM Amritsar</div>
+            <div class="meta"><span>2023 to 2025</span><span>CGPA 3.127 / 4.3</span></div>
+          </div>
+          <div class="edu-item">
+            <div class="deg">Bachelor's in Technology</div>
+            <div class="sch">Sikkim Manipal Institute of Technology</div>
+            <div class="meta"><span>2015 to 2019</span><span>CGPA 7.54 / 10</span></div>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h3>📜 Certifications</h3>
+          <div class="cert-list">
+            <div class="cert"><div class="badge">SAP</div><div class="ct">SAP Certified Associate Integration Developer<small>C_CPI_2506</small></div></div>
+            <div class="cert"><div class="badge">SAP</div><div class="ct">SAP Certified Solution Architect<small>SAP BTP</small></div></div>
+            <div class="cert"><div class="badge">PY</div><div class="ct">Python Programming Language<small>Coursera</small></div></div>
+            <div class="cert"><div class="badge">C</div><div class="ct">C &amp; C++ Programming<small>TOPS Technologies</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-tag">Beyond work</div>
+        <h2>Achievements & leadership</h2>
+      </div>
+      <div class="ach-grid">
+        <div class="ach reveal"><div class="em">🏥</div><h4>GE Healthcare Hackathon 2018</h4><p>Built an ML model for affordable health monitoring at the Precision Hackathon Challenge.</p></div>
+        <div class="ach reveal"><div class="em">🚁</div><h4>National Drone Racing, 1st Prize</h4><p>Won first place at Games of Drone 2015 and the Kaalrav national-level drone racing competition.</p></div>
+        <div class="ach reveal"><div class="em">🏀</div><h4>Basketball Champions</h4><p>1st prize, Nimbus 2018 Intersectional Basketball Tournament.</p></div>
+        <div class="ach reveal"><div class="em">🎪</div><h4>Senior Coordinator, Kaalrav 2018</h4><p>Led 30 people across 15+ events with 1000+ footfall; owned marketing strategy and execution.</p></div>
+        <div class="ach reveal"><div class="em">⚙️</div><h4>Technical Lead, Tech Adrishta 2017</h4><p>Led 10 volunteers managing 5 technical events over 2 days and ran student workshops.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <h2>Let's build reliable integrations together</h2>
+        <p>I'd be glad to talk about integration work. The fastest way to reach me is email or phone.</p>
+        <div class="contact-links">
+          <a class="btn primary email-link" href="mailto:shubhamsrivastav.904@gmail.com" data-email="shubhamsrivastav.904@gmail.com">✉️ shubhamsrivastav.904@gmail.com</a>
+          <a class="btn ghost" href="tel:+918849845053">📞 +91 88498 45053</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© <span id="yr"></span> Shubham Srivastav · SAP Integration Developer &amp; Lead · Built with care.</div>
+  </footer>
+
+  <div id="toast">Email copied to clipboard ✓</div>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // theme toggle
+  const btn = document.getElementById('themeBtn');
+  const root = document.documentElement; // we set on body
+  const body = document.body;
+  const saved = localStorage.getItem('theme');
+  if (saved) { body.setAttribute('data-theme', saved); btn.textContent = saved === 'light' ? '☀️' : '🌙'; }
+  btn.addEventListener('click', () => {
+    const next = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    body.setAttribute('data-theme', next);
+    btn.textContent = next === 'light' ? '☀️' : '🌙';
+    localStorage.setItem('theme', next);
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (Math.min(i % 6, 5) * 60) + 'ms';
+    io.observe(el);
+  });
+
+  // email buttons: copy address + show toast, and offer Gmail compose if no mail app opens
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+  }
+  document.querySelectorAll('.email-link').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = a.dataset.email;
+      // copy to clipboard (works regardless of mail-app setup)
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).catch(() => {});
+      } else {
+        const t = document.createElement('textarea');
+        t.value = email; document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (_) {}
+        document.body.removeChild(t);
+      }
+      showToast('Opening your email app… (address copied as backup)');
+      // primary action: open the visitor's default mail app
+      window.location.href = 'mailto:' + email;
+    });
+  });
+</script>
+</body>
+</html>
