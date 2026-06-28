@@ -7,7 +7,7 @@
 <meta name="description" content="Shubham Srivastav, SAP Certified Associate Integration Developer (C_CPI_2506). 7 years building and owning SAP CPI and BTP Integration Suite landscapes, with 200+ integration flows delivered." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
     --bg: #0b0f17;
@@ -19,7 +19,7 @@
     --text-dim: #9aa7bd;
     --text-faint: #6b7896;
     --accent: #5b9dff;
-    --accent-2: #7c5cff;
+    --accent-2: #5b9dff;
     --accent-soft: #5b9dff1a;
     --ring: #5b9dff44;
     --shadow: 0 20px 50px -20px rgba(0,0,0,0.6);
@@ -36,7 +36,7 @@
     --text-dim: #4a5878;
     --text-faint: #8090ac;
     --accent: #2f6bff;
-    --accent-2: #7c5cff;
+    --accent-2: #2f6bff;
     --accent-soft: #2f6bff14;
     --ring: #2f6bff33;
     --shadow: 0 20px 50px -24px rgba(40,60,120,0.25);
@@ -45,7 +45,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-padding-top: 90px; }
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -53,7 +53,7 @@
     overflow-x: hidden;
     transition: background .4s ease, color .4s ease;
   }
-  h1, h2, h3, .display { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.02em; }
+  h1, h2, h3, .display { font-family: 'Bricolage Grotesque', 'IBM Plex Sans', sans-serif; letter-spacing: -0.02em; }
   a { color: inherit; text-decoration: none; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
@@ -79,7 +79,7 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+  .brand { font-family: 'Bricolage Grotesque'; font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
   .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 12px var(--accent); }
   .nav-links { display: flex; align-items: center; gap: 6px; }
   .nav-links a { font-size: .9rem; color: var(--text-dim); padding: 8px 12px; border-radius: 10px; transition: .2s; font-weight: 500; }
@@ -108,7 +108,7 @@
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
   .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; font-weight: 700; }
   .hero h1 .grad { background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero .role { font-size: clamp(1.05rem, 2.4vw, 1.4rem); color: var(--text-dim); margin-top: 16px; font-weight: 500; font-family: 'Space Grotesk'; }
+  .hero .role { font-size: clamp(1.05rem, 2.4vw, 1.4rem); color: var(--text-dim); margin-top: 16px; font-weight: 500; font-family: 'Bricolage Grotesque'; }
   .hero p.lede { max-width: 680px; margin-top: 22px; color: var(--text-dim); font-size: 1.05rem; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
   .btn {
@@ -128,7 +128,7 @@
     padding: 22px 20px; transition: .25s; position: relative; overflow: hidden;
   }
   .stat:hover { transform: translateY(-4px); border-color: var(--ring); box-shadow: var(--shadow); }
-  .stat .num { font-family: 'Space Grotesk'; font-size: 2.1rem; font-weight: 700; background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat .num { font-family: 'Bricolage Grotesque'; font-size: 2.1rem; font-weight: 700; background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .stat .lbl { color: var(--text-faint); font-size: .85rem; margin-top: 4px; }
 
   /* ---------- sections ---------- */
@@ -190,7 +190,7 @@
   .ach { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; transition:.25s; }
   .ach:hover { transform: translateY(-4px); border-color: var(--ring); box-shadow: var(--shadow); }
   .ach .em { font-size: 1.6rem; }
-  .ach h4 { margin: 10px 0 6px; font-size: 1rem; font-family:'Space Grotesk'; }
+  .ach h4 { margin: 10px 0 6px; font-size: 1rem; font-family:'Bricolage Grotesque'; }
   .ach p { color: var(--text-dim); font-size: .9rem; }
 
   /* ---------- contact ---------- */
@@ -225,8 +225,6 @@
 <body data-theme="dark">
   <div class="bg-fx">
     <div class="grid-lines"></div>
-    <div class="glow a"></div>
-    <div class="glow b"></div>
   </div>
 
   <!-- NAV -->
